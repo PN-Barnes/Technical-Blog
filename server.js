@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 // ? RESEARCH COOKIE USE FROM CLASS 
 
 const sess = {
-    secret: 'Super secret secret',
+    secret: 'Secret',
     cookie: {},
     resave: false,
     saveUninitialized: true,
