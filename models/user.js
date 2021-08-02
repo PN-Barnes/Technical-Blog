@@ -34,5 +34,14 @@ User.init(
             },
         },
     },
-    // ! NEED TO CREATE HOOKS FOR PASSWORD HASHING AND SALTING
-)
+    {
+        // ! NEED TO CREATE HOOKS FOR PASSWORD HASHING AND SALTING
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user'
+    }
+);
+
+module.exports = User;
