@@ -48,7 +48,6 @@ User.init(
         return updateUser;
       },
     },
-    // ! NEED TO CREATE HOOKS FOR PASSWORD HASHING AND SALTING
     sequelize,
     timestamps: false,
     freezeTableName: true,
