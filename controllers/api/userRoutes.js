@@ -3,6 +3,7 @@ const { User } = require("../../models");
 
 router.post("/");
 
+// * This route will work to log the user in by checking the credentials with the database and return the session id with a response
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -38,6 +39,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// * this route will work to destroy the session when the user wishes to logout
 router.post("/logout", async (req, res) => {
   try {
     if (req.session.logged_in) {
