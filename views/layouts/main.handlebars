@@ -10,24 +10,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../../public/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Technical Blog</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a>Dashboard</a>
-        <a href="/">Home</a>
-        {{#if loggedIn}}
-          <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-          <a href="/login">Login</a>
-        {{/if}}
-      </nav>
-      <h1>Technical Blog</h1>
-    </header>
     <main>
       {{{body}}}
     </main>
@@ -36,7 +23,8 @@
     </footer>
 
     {{#if logged_in}}
-      <script src=".../../../../public/js/logout.js"></script>
+      {{! TEST FILE PATH }}
+      <script src="/js/logout.js"></script>
     {{/if}}
   </body>
 </html>
