@@ -1,15 +1,13 @@
-const { json } = require("sequelize/types");
-
 const loginForm = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector("#login-email").value;
-  const password = document.querySelector("#login-password").value;
+  const email = document.querySelector("#login-email").value.trim();
+  const password = document.querySelector("#login-password").value.trim();
 
   if (email && password) {
-    const res = await fetch("api/users/login", {
-      method: "Post",
-      body: json.stringify({ email, password }),
+    const res = await fetch("/api/users/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -21,4 +19,4 @@ const loginForm = async (event) => {
   }
 };
 
-document.querySelector("#login-form").addEventListener("submit", loginForm);
+document.querySelector(".login-form").addEventListener("submit", loginForm);

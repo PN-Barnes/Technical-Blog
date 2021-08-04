@@ -15,6 +15,22 @@
   </head>
 
   <body>
+    <header>
+      <div>
+        <nav>
+          <a href="/post">New Post</a>
+          <a href="/">Dashboard</a>
+          {{#if logged_in}}
+            <a id="logout" class="btn-no-style">Logout</a>
+          {{else}}
+            <a href="/login">Login</a>
+          {{/if}}
+        </nav>
+      </div>
+      <div>
+        <h1>Technical Blog</h1>
+      </div>
+    </header>
     <main>
       {{{body}}}
     </main>
