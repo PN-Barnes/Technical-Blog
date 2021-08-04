@@ -1,18 +1,6 @@
-
 {{>header}}
+<section>
 {{#each blogData as |blog|}}
-  <div>
-    <div>
-      <h2>
-        {{blog.title}}
-      </h2>
-    </div>
-    <div>
-      <p>{{blog.content}}</p>
-    </div>
-    <div>
-      <h4>Created By: {{blog.name}}</h4>
-    </div>
-
-  </div>
+{{> BlogCard}}
 {{/each}}
+</section>

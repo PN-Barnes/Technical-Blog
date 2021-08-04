@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Post } = require("../../models");
 const authorize = require("../../utils/authorize");
 
+// * SUCCESSFUL POST ROUTE
 router.post("/", authorize, async (req, res) => {
   try {
     const newBlogPost = await Post.create({
