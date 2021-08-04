@@ -17,14 +17,16 @@
   <body>
     <header>
       <div>
-        <nav>
-          <a href="/post">New Post</a>
-          <a href="/">Dashboard</a>
-          {{#if logged_in}}
-            <a id="logout" class="btn-no-style">Logout</a>
-          {{else}}
-            <a href="/login">Login</a>
-          {{/if}}
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <a href="/post" class="navbar-brand">New Post</a>
+            <a href="/" class="navbar-brand">Dashboard</a>
+            {{#if logged_in}}
+              <a id="logout" class="navbar-brand">Logout</a>
+            {{else}}
+              <a href="/login" class="navbar-brand">Login</a>
+            {{/if}}
+          </div>
         </nav>
       </div>
       <div>
