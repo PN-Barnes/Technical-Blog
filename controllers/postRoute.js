@@ -13,12 +13,12 @@ router.get(`/`, authorize, async (req, res) => {
       ],
     });
 
-    const posts = userPosts.get({
+    const userPosts = posts.get({
       plain: true,
     });
 
     res.render("profilePost", {
-      ...posts,
+      ...userPosts,
       logged_in: req.session.logged_in,
     });
   } catch (error) {
